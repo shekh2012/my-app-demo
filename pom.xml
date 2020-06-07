@@ -45,7 +45,6 @@
 			      <password>${password}</password>
 			      <applicationName>${cloudhub.application.name}</applicationName>
 			      <environment>${environment}</environment>
-			      <workers>1</workers>
 			    </cloudHubDeployment>
 			  </configuration>
 			</plugin>
