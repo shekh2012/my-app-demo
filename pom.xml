@@ -45,6 +45,9 @@
 			      <password>${password}</password>
 			      <applicationName>${cloudhub.application.name}</applicationName>
 			      <environment>${environment}</environment>
+			      <region>eu-west-2</region>
+            	  <workerType>Micro</workerType>
+            	  <workers>1</workers>
 			    </cloudHubDeployment>
 			  </configuration>
 			</plugin>
