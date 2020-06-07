@@ -13,7 +13,11 @@
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
+		<app.runtime>4.2.2</app.runtime>
+		<username>sm-app4</username>
+		<password>Tata@123</password>
+		<cloudhub.application.name>my-app-demo</cloudhub.application.name>
+		<environment>Sandbox</environment>
 		<app.runtime>4.2.2</app.runtime>
 		<mule.maven.plugin.version>3.2.7</mule.maven.plugin.version>
 	</properties>
@@ -27,6 +31,23 @@
 				<extensions>true</extensions>
 				<configuration>
 				</configuration>
+			</plugin>
+			<plugin>
+			  <groupId>org.mule.tools.maven</groupId>
+			  <artifactId>mule-maven-plugin</artifactId>
+			  <version>3.3.2</version>
+			  <extensions>true</extensions>
+			  <configuration>
+			    <cloudHubDeployment>
+			      <uri>https://anypoint.mulesoft.com</uri>
+			      <muleVersion>${app.runtime}</muleVersion>
+			      <username>${username}</username>
+			      <password>${password}</password>
+			      <applicationName>${cloudhub.application.name}</applicationName>
+			      <environment>${environment}</environment>
+			      <workers>1</workers>
+			    </cloudHubDeployment>
+			  </configuration>
 			</plugin>
 		</plugins>
 	</build>
